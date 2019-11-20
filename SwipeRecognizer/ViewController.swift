@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var upLabel: UILabel!
+    @IBOutlet weak var upLabel: UILabel?
     @IBOutlet weak var downLabel: UILabel!
     @IBOutlet weak var leftLabel: UILabel!
     @IBOutlet weak var rightLabel: UILabel!
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
 
     @IBAction func upSwipe(_ sender: Any) {
         upCount += 1
-        upLabel.text = "UP: \(upCount)"
+        upLabel?.text = "UP: \(upCount)"
     }
     
     @IBAction func downSwipe(_ sender: Any) {
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
 
     @IBAction func resetCount(_ sender: Any) {
         upCount = 0
-        upLabel.text = "UP: \(upCount)"
+        upLabel?.text = "UP: \(upCount)"
         
         downCount = 0
         downLabel.text = "DOWN: \(downCount)"
