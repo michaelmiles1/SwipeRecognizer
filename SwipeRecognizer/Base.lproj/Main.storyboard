@@ -21,7 +21,7 @@
                                     <navigationItem title="Swipe Counter" id="7bD-3w-5VJ">
                                         <barButtonItem key="rightBarButtonItem" title="Reset" id="Rbb-nI-4T1">
                                             <connections>
-                                                <action selector="resetCount:" destination="BYZ-38-t0r" id="04m-S6-20C"/>
+                                                <action selector="resetCount:" destination="BYZ-38-t0r" id="wqo-uU-DMN"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -61,6 +61,12 @@
                                 <rect key="frame" x="20" y="367" width="374" height="475"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wZV-CU-e8Y" appends="YES" id="vnP-Hy-6E4"/>
+                                    <outletCollection property="gestureRecognizers" destination="CRA-P7-mQN" appends="YES" id="4nK-jK-AQl"/>
+                                    <outletCollection property="gestureRecognizers" destination="74b-7l-kIh" appends="YES" id="gNb-Ul-j9B"/>
+                                    <outletCollection property="gestureRecognizers" destination="dLc-GK-kNS" appends="YES" id="xxn-J1-S1K"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -93,6 +99,26 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="wZV-CU-e8Y" userLabel="Up">
+                    <connections>
+                        <action selector="upSwipe:" destination="BYZ-38-t0r" id="Hp6-Xt-dP0"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="CRA-P7-mQN" userLabel="Down">
+                    <connections>
+                        <action selector="downSwipe:" destination="BYZ-38-t0r" id="nLc-Nr-UDb"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="74b-7l-kIh" userLabel="Left">
+                    <connections>
+                        <action selector="leftSwipe:" destination="BYZ-38-t0r" id="nLg-NT-mEB"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="dLc-GK-kNS" userLabel="Right">
+                    <connections>
+                        <action selector="rightSwipe:" destination="BYZ-38-t0r" id="vCd-Yg-Qtx"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="133" y="139"/>
         </scene>

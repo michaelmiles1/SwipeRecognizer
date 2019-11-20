@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var downLabel: UILabel!
     @IBOutlet weak var leftLabel: UILabel!
     @IBOutlet weak var rightLabel: UILabel!
-    
+
     var upCount = 0
     var downCount = 0
     var leftCount = 0
@@ -24,7 +24,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+
+    @IBAction func upSwipe(_ sender: Any) {
+        upCount += 1
+        upLabel.text = "UP: \(upCount)"
+    }
     
+    @IBAction func downSwipe(_ sender: Any) {
+        downCount += 1
+        downLabel.text = "DOWN: \(downCount)"
+    }
+    
+    @IBAction func leftSwipe(_ sender: Any) {
+        leftCount += 1
+        leftLabel.text = "LEFT: \(leftCount)"
+    }
+    
+    @IBAction func rightSwipe(_ sender: Any) {
+        rightCount += 1
+        rightLabel.text = "RIGHT: \(rightCount)"
+    }
+
     @IBAction func resetCount(_ sender: Any) {
         upCount = 0
         upLabel.text = "UP: \(upCount)"
